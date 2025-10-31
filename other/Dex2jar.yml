@@ -19,7 +19,7 @@ ReleaseDate: 2024-11-20 # (Placeholder date, please verify)
 
 Dependencies:
   PackageDependencies:
-  - PackageIdentifier: Microsoft.OpenJDK.17 # Recommended standard JRE
+  - PackageIdentifier: Microsoft.OpenJDK.17 
     MinimumVersion: 17.0.0
 
 Installers:
@@ -27,8 +27,6 @@ Installers:
   InstallerType: zip
   InstallerUrl: https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip
   InstallerSha256: ee7c45eb3c1d2474a6145d8d447e651a736a22d9664b6d3d3be5a5a817dda23a
-
-  # The primary command for conversion on Windows is the batch script d2j-dex2jar.bat
   PortableCommandAlias: d2j-dex2jar.bat
   
   InstallationNotes: |

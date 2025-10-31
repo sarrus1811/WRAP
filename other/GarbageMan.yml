@@ -18,7 +18,6 @@ Tags:
 ReleaseDate: 2024-11-20 # (Placeholder date, please verify)
 
 Dependencies:
-  # GarbageMan is typically written in Python, but this is a compiled binary distribution.
   PackageDependencies: []
 
 Installers:

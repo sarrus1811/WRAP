@@ -21,8 +21,7 @@ Dependencies:
   PackageDependencies: []
 
 Installers:
-- Architecture: x86 # Assuming x86/32-bit for older Windows applications unless specified otherwise
-  # The installer type is 'portable' as it is a single executable file.
+- Architecture: x86 
   InstallerType: portable
   InstallerUrl: https://github.com/hasherezade/dll_to_exe/releases/download/v1.1/dll_to_exe.exe
   InstallerSha256: 930c29f3f36443d6e3ecf3fa2e9c39251f0e66a1e1c0e290ed8c1cf0cc7789f8

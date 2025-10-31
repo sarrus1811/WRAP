@@ -25,7 +25,6 @@ Installers:
   InstallerType: zip
   InstallerUrl: https://github.com/mandiant/GoReSym/releases/download/v3.1.2/GoReSym-windows.zip
   InstallerSha256: bcad66f944ba528d6a71fd709ca8f7ac0e1cff094eae80f458e1dd335c985e05
-  # The main executable inside the zip is GoReSym.exe.
   PortableCommandAlias: goresym
 
   InstallationNotes: |

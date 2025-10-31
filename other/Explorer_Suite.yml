@@ -18,14 +18,13 @@ Tags:
 ReleaseDate: 2024-11-20 # (Placeholder date, please verify)
 
 Installers:
-- Architecture: x86 # Explorer Suite is traditionally 32-bit and handles both 32/64-bit files
+- Architecture: x86
   InstallerType: exe
   
   InstallerUrl: https://ntcore.com/files/ExplorerSuite.exe
 
   InstallerSha256: 94f4348ec573b05990b1e19542986e46dc30a87870739f5d5430b60072d5144d
 
-  # The product is installed, so we use the default silent command.
   InstallerSwitches:
     Silent: /S
     SilentWithProgress: /S

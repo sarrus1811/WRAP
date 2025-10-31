@@ -510,7 +510,7 @@ function Invoke-installFromExternalSource {
         "Ghidra"            = "Ghidra.yml"
         "GoReSym"           = "GoReSym.yml"
         "gostringungarbler" = "Gostringungarbler.yml"
-        "HollowsHunter"     = "Hollows_hunter.yml"
+        "Hollows_Hunter"    = "Hollows_hunter.yml"
         "jd-gui"            = "JD-GUI.yml"
         "pe-sieve"          = "PE-sieve.yml"
         "pe-unmapper"       = "pe-unmapper.yml"
@@ -556,70 +556,17 @@ function Invoke-installFromExternalSource {
     
     # Extract InstallerUrl (for manual portable handling)
     $InstallerUrl = ($manifestContent | Select-String -Pattern 'InstallerUrl:\s*(.*)').Matches.Groups[1].Value.Trim()
+    
+    # Types that require manual download/extraction because winget fails --location
     $portableTypes = @('zip', 'portable', 'pwa') 
     $isPortable = $installerType -in $portableTypes
+    
+    # Standard installer types that work with winget --location
+    $standardTypes = @('msi', 'exe', 'inno', 'nullsoft', 'burn', 'wix') 
 
     try {
-        if ($isPortable) {
-            # --- PORTABLE (ZIP/JAR/PWA) INSTALLATION PATH (Manual Download/Copy) ---
-            Write-Host "Portable package detected ($installerType). Bypassing 'winget' to manually enforce path: $InstallPath" -ForegroundColor Magenta
-            
-            if (-not $InstallerUrl) {
-                Write-Host "Error: Could not find InstallerUrl in manifest for $($programName). Cannot proceed with manual installation." -ForegroundColor Red
-                return
-            }
-
-            # 1. Setup paths and directories
-            $TempDir = Join-Path -Path $env:TEMP -ChildPath "winget-temp-$([Guid]::NewGuid().Guid)"
-            if (-not (Test-Path $TempDir)) { New-Item -Path $TempDir -ItemType Directory | Out-Null }
-            if (-not (Test-Path $InstallPath)) { New-Item -Path $InstallPath -ItemType Directory | Out-Null }
-
-            # Determine the file name from the URL
-            $FileExtension = [System.IO.Path]::GetExtension($InstallerUrl)
-            $BaseFileName = [System.IO.Path]::GetFileName($InstallerUrl)
-            $DownloadPath = Join-Path -Path $TempDir -ChildPath $BaseFileName
-            
-            # 2. Download the file
-            Write-Host "Downloading $InstallerUrl..."
-            Write-Host "--- Starting Download using Invoke-WebRequest ---" -ForegroundColor Cyan
-            
-            Invoke-WebRequest -Uri $InstallerUrl -OutFile $DownloadPath -ErrorAction Stop
-            
-            Write-Host "Download complete. File saved to: $DownloadPath"
-            
-            # 3. Process based on file extension
-            if ($FileExtension -match '\.zip$' -or $FileExtension -match '\.7z$' -or $FileExtension -match '\.rar$') {
-                Write-Host "File is a ZIP/archive. Extracting to $InstallPath..."
-                # Use Expand-Archive for zip, or just copy the file for other types
-                if ($FileExtension -match '\.zip$') {
-                    Expand-Archive -Path $DownloadPath -DestinationPath $InstallPath -Force
-                }
-                else {
-                    Write-Host "WARNING: Non-ZIP archive detected ($FileExtension). You may need 7z for extraction." -ForegroundColor Yellow
-                    Copy-Item -Path $DownloadPath -DestinationPath $InstallPath -Force # Copying archive itself
-                }
-                Write-Host "Successfully handled archive contents to $InstallPath." -ForegroundColor Green
-            }
-            elseif ($FileExtension -match '\.jar$' -or $FileExtension -match '\.dat$' -or $FileExtension -match '\.bin$' -or $FileExtension -notmatch '\.') {
-                # For direct files (JAR, data files, or files with no extension)
-                Write-Host "File is a direct portable file ($FileExtension). Copying to $InstallPath..."
-                Copy-Item -Path $DownloadPath -DestinationPath $InstallPath -Force
-                Write-Host "Successfully copied $BaseFileName to $InstallPath." -ForegroundColor Green
-            }
-            else {
-                # Fallback for any other portable type that isn't a known archive
-                Write-Host "Copying downloaded portable file to $InstallPath..." -ForegroundColor Yellow
-                Copy-Item -Path $DownloadPath -DestinationPath $InstallPath -Force
-            }
-
-            # 4. Cleanup
-            Remove-Item -Path $TempDir -Recurse -Force
-            
-            Write-Host "Installation for $($programName) completed successfully to $InstallPath." -ForegroundColor Green
-            $exitCode = 0 
-            
-        }
-        else {
+        # --- Standard installation (Using winget for MSI/EXE installers) ---
+        if ($installerType -in $standardTypes) { 
             $arguments = @(
                 "install", 
                 "--manifest", $filePath,
@@ -635,27 +582,93 @@ function Invoke-installFromExternalSource {
             
             Write-Host "--- Installation Finished ---" -ForegroundColor Cyan
         }
+        # --- Portable Installation (If winget fails) ---
+        elseif ($isPortable) {
+            Write-Host "Portable package detected ($installerType). Bypassing 'winget' to manually enforce path: $InstallPath" -ForegroundColor Magenta
+            
+            if (-not $InstallerUrl) {
+                Write-Host "Error: Could not find InstallerUrl in manifest for $($programName). Cannot proceed with manual installation." -ForegroundColor Red
+                return
+            }
 
-        # Final exit code check
+            # Setup paths and directories
+            $TempDir = Join-Path -Path $env:TEMP -ChildPath "winget-temp-$([Guid]::NewGuid().Guid)"
+            if (-not (Test-Path $TempDir)) { New-Item -Path $TempDir -ItemType Directory | Out-Null }
+            if (-not (Test-Path $InstallPath)) { New-Item -Path $InstallPath -ItemType Directory | Out-Null }
+            
+            # Determine the file name and download path
+            $FileExtension = [System.IO.Path]::GetExtension($InstallerUrl)
+            $BaseFileName = [System.IO.Path]::GetFileName($InstallerUrl)
+            $DownloadPath = Join-Path -Path $TempDir -ChildPath $BaseFileName
+            
+            Write-Host "Downloading $InstallerUrl..."
+            Write-Host "--- Starting Download using Invoke-WebRequest ---" -ForegroundColor Cyan
+            
+            Invoke-WebRequest -Uri $InstallerUrl -OutFile $DownloadPath -ErrorAction Stop
+            
+            Write-Host "Download complete. File saved to: $DownloadPath"
+            
+            # Process based on file extension (Ensuring all are covered with clean logic)
+            if ($FileExtension -match '\.zip$' -or $FileExtension -match '\.7z$' -or $FileExtension -match '\.rar$') {
+                Write-Host "File is a ZIP/archive. Extracting to $InstallPath..."
+                if ($FileExtension -match '\.zip$') {
+                    Expand-Archive -Path $DownloadPath -DestinationPath $InstallPath -Force
+                }
+                else {
+                    Write-Host "WARNING: Non-ZIP archive detected ($FileExtension). You may need 7z for extraction." -ForegroundColor Yellow
+                    Copy-Item -Path $DownloadPath -DestinationPath $InstallPath -Force # Copying archive itself
+                }
+                Write-Host "Successfully handled archive contents to $InstallPath." -ForegroundColor Green
+            }
+            elseif ($FileExtension -match '\.jar$' -or $FileExtension -match '\.dat$' -or $FileExtension -match '\.bin$' -or $FileExtension -notmatch '\.') {
+                # For direct files (JAR, data files, or files with no extension, like pe-sieve64.exe)
+                Write-Host "File is a direct portable file ($FileExtension). Copying to $InstallPath..."
+                Copy-Item -Path $DownloadPath -DestinationPath $InstallPath -Force
+                Write-Host "Successfully copied $BaseFileName to $InstallPath." -ForegroundColor Green
+            }
+            else {
+                # Fallback for any other portable type
+                Write-Host "Copying downloaded portable file to $InstallPath..." -ForegroundColor Yellow
+                Copy-Item -Path $DownloadPath -DestinationPath $InstallPath -Force
+            }
+
+            # Cleanup
+            Remove-Item -Path $TempDir -Recurse -Force
+            
+            Write-Host "Installation for $($programName) completed successfully to $InstallPath." -ForegroundColor Green
+            $exitCode = 0 # Simulate success
+            
+        }
+        else {
+            # Catch-all for unknown or unsupported installer types
+            Write-Host "Error: Installer type '$installerType' is neither a supported portable type nor a standard winget-compatible installer. Skipping installation." -ForegroundColor Red
+            return
+        }
+
+        # Final exit code check (Only runs if installation was attempted)
         if ($exitCode -eq 0) {
             Write-Host "Installation for $($programName) completed successfully." -ForegroundColor Green
             
             # --- Add to Path ---
-            Write-Host "Attempting to add '$InstallPath' to the System PATH..." -ForegroundColor Cyan
+            # Write-Host "Attempting to add '$InstallPath' to the System PATH..." -ForegroundColor Cyan
 
-            $currentPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
+            # # Get the current system PATH (Machine scope)
+            # $currentPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
 
-            $pathExists = $currentPath.Split(';') | Where-Object { $_ -ceq $InstallPath }
+            # # Check if the path already exists (case-insensitive)
+            # # Use -ceq for case-sensitive exact match, ensuring we only add the exact path once.
+            # $pathExists = $currentPath.Split(';') | Where-Object { $_ -ceq $InstallPath }
             
-            if ($pathExists) {
-                Write-Host "Path entry '$InstallPath' already exists in the System PATH. Skipping addition." -ForegroundColor Yellow
-            }
-            else {
-                $newPath = "$currentPath;$InstallPath"
-                [Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
-                Write-Host "Successfully added '$InstallPath' to the System PATH." -ForegroundColor Green
-                Write-Host "NOTE: You may need to restart your terminal or shell for the PATH change to take effect." -ForegroundColor Yellow
-            }
+            # if ($pathExists) {
+            #     Write-Host "Path entry '$InstallPath' already exists in the System PATH. Skipping addition." -ForegroundColor Yellow
+            # }
+            # else {
+            #     # Append the new path and update the environment variable
+            #     $newPath = "$currentPath;$InstallPath"
+            #     [Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
+            #     Write-Host "Successfully added '$InstallPath' to the System PATH." -ForegroundColor Green
+            #     Write-Host "NOTE: You may need to restart your terminal or shell for the PATH change to take effect." -ForegroundColor Yellow
+            # }
             
         }
         else {

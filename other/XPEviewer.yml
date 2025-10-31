@@ -22,14 +22,11 @@ Dependencies:
 
 Installers:
 - Architecture: x64
-  # The installer type is 'zip' as the download is a compressed archive.
   InstallerType: zip
   
   InstallerUrl: https://github.com/horsicq/XPEViewer/releases/download/0.05/xpeviewer_win64_portable_0.05_x64.zip
 
   InstallerSha256: d6cc3006f9400af734379999f2549807312ed7ca4f76f197c7c57b32fbf6684f
-
-  # We set the PortableCommandAlias to the main executable (assuming standard naming).
   PortableCommandAlias: XPEViewer.exe
 
   InstallationNotes: |

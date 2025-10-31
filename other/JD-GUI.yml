@@ -26,8 +26,7 @@ Installers:
   InstallerType: zip
   InstallerUrl: https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-windows-1.6.6.zip
   InstallerSha256: 79c231399d3d39d14fce7607728336acb47a6e02e9e1c5f2fa16e2450c0c46cb
-  
-  # The main executable inside the zip is jd-gui.exe.
+
   PortableCommandAlias: jd-gui
   InstallationNotes: |
     JD-GUI is a Java application. This portable version requires a Java 17 Runtime Environment (JRE)
