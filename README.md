@@ -1,1 +1,1 @@
-Windows Reverse-engineering and Analysis Platform. Scripts for setting up a reverse engineering system on Windows 11. Thanks to [arkbtw](https://github.com/arkbtw) for helping with winget.
+Windows Reverse-engineering and Analysis Platform. Scripts for setting up a reverse engineering system on Windows 11. Thanks to [arkbtw](https://github.com/arkbtw) for helping with winget related technicalities.
