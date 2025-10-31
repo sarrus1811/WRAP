@@ -603,9 +603,7 @@ function Invoke-installFromExternalSource {
             
             Write-Host "Downloading $InstallerUrl..."
             Write-Host "--- Starting Download using Invoke-WebRequest ---" -ForegroundColor Cyan
-            
             Invoke-WebRequest -Uri $InstallerUrl -OutFile $DownloadPath -ErrorAction Stop
-            
             Write-Host "Download complete. File saved to: $DownloadPath"
             
             # Process based on file extension (Ensuring all are covered with clean logic)
@@ -634,13 +632,13 @@ function Invoke-installFromExternalSource {
 
             # Cleanup
             Remove-Item -Path $TempDir -Recurse -Force
-            
+    
             Write-Host "Installation for $($programName) completed successfully to $InstallPath." -ForegroundColor Green
             $exitCode = 0 
             
         }
         else {
-            # Catch-all for unknown or unsupported installer types
+            # For unsupported installer types
             Write-Host "Error: Installer type '$installerType' is neither a supported portable type nor a standard winget-compatible installer. Skipping installation." -ForegroundColor Red
             return
         }
