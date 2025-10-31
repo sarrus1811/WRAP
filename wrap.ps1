@@ -554,10 +554,10 @@ function Invoke-installFromExternalSource {
         "unknown"
     }
     
-    # Extract InstallerUrl (for manual portable handling)
+    # Extract InstallerUrl (for manually handling portables)
     $InstallerUrl = ($manifestContent | Select-String -Pattern 'InstallerUrl:\s*(.*)').Matches.Groups[1].Value.Trim()
     
-    # Types that require manual download/extraction because winget fails --location
+    # Manual download/extraction when winget fails --location
     $portableTypes = @('zip', 'portable', 'pwa') 
     $isPortable = $installerType -in $portableTypes
     
@@ -643,7 +643,7 @@ function Invoke-installFromExternalSource {
             return
         }
 
-        # Final exit code check (Only runs if installation was attempted)
+        # Final exit code check (Runs runs if installation was attempted)
         if ($exitCode -eq 0) {
             Write-Host "Installation for $($programName) completed successfully." -ForegroundColor Green
             
