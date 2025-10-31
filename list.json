@@ -1,0 +1,1065 @@
+[
+    {
+        "Name": "010 editor",
+        "Category": [
+            "Hex editor"
+        ],
+        "Source": [
+            "winget",
+            "SweetScape.010Editor"
+        ],
+        "Description": "Professional Text Editor + World's Best Hex Editor.",
+        "Documentation": "https://www.sweetscape.com/010editor/manual"
+    },
+    {
+        "Name": "7zip",
+        "Category": [
+            "Compression",
+            "Archive"
+        ],
+        "Source": [
+            "winget",
+            "7zip.7zip"
+        ],
+        "Description": "Open source file archiver.",
+        "Documentation": ""
+    },
+    {
+        "Name": "Advanced Installer",
+        "Category": [
+            "Packaging"
+        ],
+        "Source": [
+            "winget",
+            "Caphyon.AdvancedInstaller"
+        ],
+        "Description": "Windows Installer Packaging Tool.",
+        "Documentation": "https://www.advancedinstaller.com/user-guide"
+    },
+    {
+        "Name": "Alacritty",
+        "Category": [
+            "Terminal"
+        ],
+        "Source": [
+            "winget",
+            "Alacritty.Alacritty"
+        ],
+        "Description": "Alacritty is a free and open-source GPU accelerated terminal emulator focused on performance and simplicity",
+        "Documentation": "https://github.com/alacritty/alacritty/wiki"
+    },
+    {
+        "Name": "Angr",
+        "Category": [
+            "Python",
+            "Binary analysis"
+        ],
+        "Source": [
+            "pip",
+            "angr"
+        ],
+        "Description": "Open-source binary analysis platform for Python.",
+        "Documentation": "https://docs.angr.io/en/latest"
+    },
+    {
+        "Name": "Autopsy",
+        "Category": [
+            "Forensics"
+        ],
+        "Source": [
+            "winget",
+            "SleuthKit.Autopsy"
+        ],
+        "Description": "Autopsy is the premier end-to-end open source digital forensics platform.",
+        "Documentation": "https://sleuthkit.org/autopsy/docs/user-docs/4.22.0"
+    },
+    {
+        "Name": "API Monitor",
+        "Category": [
+            "Dynamic Analysis",
+            "Diagnostic"
+        ],
+        "Source": [
+            "github",
+            "https://github.com/iBotPeaches/Apktool/releases/download/v2.12.1/apktool_2.12.1.jar"
+        ],
+        "Description": "API Monitor is a software that monitors and displays API calls made by applications and services.",
+        "Documentation": "http://www.rohitab.com/category/api-monitor-tutorials"
+    },
+    {
+        "Name": "Apktool",
+        "Category": [
+            "Android",
+            "Disassembler"
+        ],
+        "Source": [
+            "github",
+            "https://github.com/iBotPeaches/Apktool/releases/download/v2.12.1/apktool_2.12.1.jar"
+        ],
+        "Description": "A tool for reverse engineering Android apk files.",
+        "Documentation": "https://apktool.org/wiki/the-basics/intro"
+    },
+    {
+        "Name": "Asar",
+        "Category": [
+            "Archive"
+        ],
+        "Source": [
+            "npm",
+            "@electron/asar"
+        ],
+        "Description": "Asar is a simple extensive archive format, it works like tar that concatenates all files together without compression, while having random access support.",
+        "Documentation": "https://github.com/electron/asar"
+    },
+    {
+        "Name": "AutoIt-Ripper",
+        "Category": [
+            "AutoIt",
+            "Packaging"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/nazywam/AutoIt-Ripper/archive/refs/tags/v1.1.2.zip"
+        ],
+        "Description": "This is a short python script that allows for extraction of 'compiled' AutoIt scripts from PE executables.",
+        "Documentation": "https://github.com/nazywam/AutoIt-Ripper"
+    },
+    {
+        "Name": "Binary Ninja",
+        "Category": [
+            "Disassembler",
+            "Debugger",
+            "Decompiler"
+        ],
+        "Source": [
+            "winget",
+            "Vector35.BinaryNinja"
+        ],
+        "Description": "Binary Ninja is an interactive decompiler, disassembler, debugger, and binary analysis.",
+        "Documentation": "https://binary.ninja/support/#documentation"
+    },
+    {
+        "Name": "BinDiff",
+        "Category": [
+            "Diff"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/google/bindiff/releases/download/v8/bindiff8.msi"
+        ],
+        "Description": "Quickly find differences and similarities in disassembled code.",
+        "Documentation": "https://github.com/google/bindiff/tree/main/docs"
+    },
+    {
+        "Name": "BlobRunner",
+        "Category": [
+            "Debugger",
+            "Binary analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/OALabs/BlobRunner/releases/download/v0.0.5/blobrunner64.zip"
+        ],
+        "Description": "Quickly debug shellcode extracted during malware analysis.",
+        "Documentation": "https://github.com/OALabs/BlobRunner"
+    },
+    {
+        "Name": "Bytecode Viewer",
+        "Category": [
+            "Android",
+            "Java",
+            "Decompiler",
+            "Debugger"
+        ],
+        "Source": [
+            "github",
+            "https://github.com/Konloch/bytecode-viewer/releases/download/v2.13.1/Bytecode-Viewer-2.13.1.jar"
+        ],
+        "Description": "A Java 8+ Jar & Android APK Reverse Engineering Suite (Decompiler, Editor, Debugger & More).",
+        "Documentation": "https://github.com/Konloch/bytecode-viewer"
+    },
+    {
+        "Name": "Capa",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/mandiant/capa/releases/download/v9.2.1/capa-v9.2.1-windows.zip"
+        ],
+        "Description": "The FLARE team's open-source tool to identify capabilities in executable files.",
+        "Documentation": ""
+    },
+    {
+        "Name": "Capa",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "pip",
+            "flare-capa"
+        ],
+        "Description": "The FLARE team's open-source tool to identify capabilities in executable files.",
+        "Documentation": ""
+    },
+    {
+        "Name": "CodeTrack",
+        "Category": [
+            ".NET"
+        ],
+        "Source": [
+            "other",
+            "https://www.getcodetrack.com/releases/codetrack_1_0_3_3_multi.zip"
+        ],
+        "Description": "CodeTrack is a versatile profiler with some extra tricks up its sleeve.",
+        "Documentation": ""
+    },
+    {
+        "Name": "CryptoTester",
+        "Category": [
+            "Binary analysis",
+            "Crypto",
+            "Diff"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/Demonslay335/CryptoTester/releases/download/v1.7.3.0/CryptoTester.zip"
+        ],
+        "Description": "A utility for playing with cryptography, geared towards ransomware analysis.",
+        "Documentation": "https://github.com/Demonslay335/CryptoTester"
+    },
+    {
+        "Name": "Cutter",
+        "Category": [
+            "Binary analysis",
+            "Decompiler",
+            "Debugger",
+            "Disassembler",
+            "Hex editor"
+        ],
+        "Source": [
+            "winget",
+            "Rizin.Cutter"
+        ],
+        "Description": "Cutter's goal is to be an advanced FREE and open-source reverse-engineering platform while keeping the user experience at mind.",
+        "Documentation": "https://cutter.re/docs/user-docs.html"
+    },
+    {
+        "Name": "CyberChef",
+        "Category": [
+            "Encryption",
+            "Encoding",
+            "Decryption",
+            "Compression"
+        ],
+        "Source": [
+            "Web App",
+            "https://gchq.github.io/CyberChef"
+        ],
+        "Description": "The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis.",
+        "Documentation": "https://github.com/gchq/CyberChef"
+    },
+    {
+        "Name": "dex2jar",
+        "Category": [
+            "Android",
+            "Java"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip"
+        ],
+        "Description": "Tools to work with android .dex and java .class files.",
+        "Documentation": "https://github.com/pxb1988/dex2jar"
+    },
+    {
+        "Name": "decompyle3",
+        "Category": [
+            "Python",
+            "Decompiler"
+        ],
+        "Source": [
+            "pip",
+            "decompyle3"
+        ],
+        "Description": "Python cross-version byte-code decompiler.",
+        "Documentation": "https://github.com/rocky/python-decompile3"
+    },
+    {
+        "Name": "Diaphora",
+        "Category": [
+            "Diff"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/joxeankoret/diaphora/archive/refs/tags/3.2.1.zip"
+        ],
+        "Description": "Diaphora, the most advanced Free and Open Source program diffing tool.",
+        "Documentation": "https://github.com/joxeankoret/diaphora/wiki"
+    },
+    {
+        "Name": "Detect-It-Easy",
+        "Category": [
+            "Static Analysis",
+            "Disassembler",
+            "Unpacker"
+        ],
+        "Source": [
+            "winget",
+            "horsicq.DIE-engine"
+        ],
+        "Description": "Detect It Easy (DiE) is a powerful tool for file type identification.",
+        "Documentation": "https://github.com/horsicq/Detect-It-Easy"
+    },
+    {
+        "Name": "dll_to_exe",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/hasherezade/dll_to_exe/releases/download/v1.1/dll_to_exe.exe"
+        ],
+        "Description": "Converts a DLL into EXE.",
+        "Documentation": "https://github.com/hasherezade/dll_to_exe"
+    },
+    {
+        "Name": "Edit",
+        "Category": [
+            "Text Editor"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.Edit"
+        ],
+        "Description": "Terminal text editor from Microsoft.",
+        "Documentation": "https://github.com/microsoft/edit"
+    },
+    {
+        "Name": "Exeinfope",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/ExeinfoASL/ASL/releases/download/v0.0.9.0/Exeinfo_0090.zip"
+        ],
+        "Description": "Free Windows Detector Software.",
+        "Documentation": ""
+    },
+    {
+        "Name": "Explorer Suite",
+        "Category": [
+            "Binary analysis"
+        ],
+        "Source": [
+            "other",
+            "https://ntcore.com/files/ExplorerSuite.exe"
+        ],
+        "Description": "Explorer Suite is a comprehensive set of binary analysis tools for Windows PE (Portable Executable) files.",
+        "Documentation": ""
+    },
+    {
+        "Name": "fakenet-ng",
+        "Category": [
+            "Network Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/mandiant/flare-fakenet-ng/releases/download/v3.5/fakenet3.5.zip"
+        ],
+        "Description": "FakeNet-NG - Next Generation Dynamic Network Analysis Tool.",
+        "Documentation": "https://github.com/mandiant/flare-fakenet-ng"
+    },
+    {
+        "Name": "FLOSS",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "winget",
+            "Mandiant.FLOSS"
+        ],
+        "Description": "FLARE Obfuscated String Solver - Automatically extract obfuscated strings from malware.",
+        "Documentation": "https://github.com/mandiant/flare-floss/blob/master/doc/theory.md"
+    },
+    {
+        "Name": "GarbageMan",
+        "Category": [
+            ".NET"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/WithSecureLabs/GarbageMan/releases/download/v0.2.4/GarbageMan-0.2.4.zip"
+        ],
+        "Description": "GarbageMan is a set of tools designed for .NET heap analysis.",
+        "Documentation": "https://labs.withsecure.com/tools/garbageman"
+    },
+    {
+        "Name": "Ghidra",
+        "Category": [
+            "Disassembler",
+            "Debugger",
+            "Decompiler"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.4.2_build/ghidra_11.4.2_PUBLIC_20250826.zip"
+        ],
+        "Description": "Ghidra is a software reverse engineering (SRE) framework created and maintained by the National Security Agency Research Directorate.",
+        "Documentation": "https://ghidra.re"
+    },
+    {
+        "Name": "Git",
+        "Category": [
+            "Git"
+        ],
+        "Source": [
+            "winget",
+            "Git.Git"
+        ],
+        "Description": " Git is a free and open source distributed version control system.",
+        "Documentation": "https://github.com/git-for-windows/git/wiki"
+    },
+    {
+        "Name": "Go",
+        "Category": [
+            "Compiler",
+            "Go"
+        ],
+        "Source": [
+            "winget",
+            "GoLang.Go"
+        ],
+        "Description": "The Go programming language.",
+        "Documentation": "https://go.dev/doc"
+    },
+    {
+        "Name": "GoReSym",
+        "Category": [
+            "Go",
+            "Static Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/mandiant/GoReSym/releases/download/v3.1.2/GoReSym-windows.zip"
+        ],
+        "Description": "Go symbol recovery tool.",
+        "Documentation": "https://www.mandiant.com/resources/blog/golang-internals-symbol-recovery"
+    },
+    {
+        "Name": "gostringungarbler",
+        "Category": [
+            "Go"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/mandiant/gostringungarbler/archive/refs/tags/v1.0.0.zip"
+        ],
+        "Description": "Python tool to resolve all strings in Go binaries obfuscated by garble.",
+        "Documentation": "https://github.com/mandiant/gostringungarbler"
+    },
+    {
+        "Name": "hashmyfiles",
+        "Category": [
+            "Checksums"
+        ],
+        "Source": [
+            "winget",
+            "NirSoft.HashMyFiles "
+        ],
+        "Description": "Hash stuff.",
+        "Documentation": "https://www.nirsoft.net/utils/hash_my_files.html"
+    },
+    {
+        "Name": "HollowsHunter",
+        "Category": [
+            "Dynamic Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/hasherezade/hollows_hunter/releases/download/v0.4.1.1/hollows_hunter64.exe"
+        ],
+        "Description": "Scans all running processes. Recognizes and dumps a variety of potentially malicious implants (replaced/implanted PEs, shellcodes, hooks, in-memory patches).",
+        "Documentation": ""
+    },
+    {
+        "Name": "HxD",
+        "Category": [
+            "Hex editor"
+        ],
+        "Source": [
+            "winget",
+            "MHNexus.HxD"
+        ],
+        "Description": "HxD is a carefully designed and fast hex editor which, additionally to raw disk editing and modifying of main memory (RAM), handles files of any size.",
+        "Documentation": "https://mh-nexus.de/en/hxd"
+    },
+    {
+        "Name": "IDA Free",
+        "Category": [
+            "Debugger",
+            "Decompiler",
+            "Disassembler"
+        ],
+        "Source": [
+            "winget",
+            "Hex-Rays.IDA.Free"
+        ],
+        "Description": "This (completely!) free version of IDA offers a privileged opportunity to see IDA in action.",
+        "Documentation": "https://hex-rays.com/documentation/"
+    },
+    {
+        "Name": "ILSpy",
+        "Category": [
+            ".NET",
+            "Decompiler"
+        ],
+        "Source": [
+            "winget",
+            "icsharpcode.ILSpy"
+        ],
+        "Description": ".NET Decompiler with support for PDB generation, ReadyToRun, Metadata (&more) - cross-platform!",
+        "Documentation": "https://github.com/icsharpcode/ILSpy/blob/master/doc/README.md"
+    },
+    {
+        "Name": "ImHex",
+        "Category": [
+            "Hex editor"
+        ],
+        "Source": [
+            "winget",
+            "WerWolv.ImHex"
+        ],
+        "Description": "A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.",
+        "Documentation": "https://docs.werwolv.net/imhex"
+    },
+    {
+        "Name": "Innoextract",
+        "Category": [
+            "Archive",
+            "Inno"
+        ],
+        "Source": [
+            "winget",
+            "dscharrer.innoextract"
+        ],
+        "Description": "A tool to unpack installers created by Inno Setup.",
+        "Documentation": "https://github.com/dscharrer/innoextract"
+    },
+    {
+        "Name": "jadx",
+        "Category": [
+            "Java",
+            "Decompiler"
+        ],
+        "Source": [
+            "winget",
+            "Skylot.jadx"
+        ],
+        "Description": "Command line and GUI tools for producing Java source code from Android Dex and Apk files",
+        "Documentation": "https://github.com/skylot/jadx"
+    },
+    {
+        "Name": "jd-gui",
+        "Category": [
+            "Java",
+            "Decompiler"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-windows-1.6.6.zip"
+        ],
+        "Description": "A standalone Java Decompiler GUI.",
+        "Documentation": "https://github.com/java-decompiler/jd-gui"
+    },
+    {
+        "Name": "JDK",
+        "Category": [
+            "Compiler",
+            "Runtime"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.OpenJDK.21"
+        ],
+        "Description": "The Microsoft Build of OpenJDK.",
+        "Documentation": "https://learn.microsoft.com/en-us/java/openjdk/overview"
+    },
+    {
+        "Name": "Magika",
+        "Category": [
+            "Classification"
+        ],
+        "Source": [
+            "pip",
+            "magika"
+        ],
+        "Description": "Fast and accurate AI powered file content types detection.",
+        "Documentation": "https://google.github.io/magika"
+    },
+    {
+        "Name": "malware-jail",
+        "Category": [
+            "JavaScript",
+            "Sandbox"
+        ],
+        "Source": [
+            "github",
+            "https://github.com/HynekPetrak/malware-jail.git"
+        ],
+        "Description": "Sandbox for semi-automatic Javascript malware analysis, deobfuscation and payload extraction. Written for Node.js.",
+        "Documentation": "https://github.com/HynekPetrak/malware-jail"
+    },
+    {
+        "Name": "NASM",
+        "Category": [
+            "Assembler"
+        ],
+        "Source": [
+            "winget",
+            "NASM.NASM"
+        ],
+        "Description": "An asssembler for the x86 CPU architecture portable to nearly every modern platform, and with code generation for many platforms old and new.",
+        "Documentation": "https://www.nasm.us/docs.php"
+    },
+    {
+        "Name": "Nmap",
+        "Category": [
+            "Network Analysis"
+        ],
+        "Source": [
+            "winget",
+            "Insecure.Nmap"
+        ],
+        "Description": "Nmap is a free and open source utility for network discovery and security auditing.",
+        "Documentation": "https://nmap.org/docs.html"
+    },
+    {
+        "Name": "Nodejs",
+        "Category": [
+            "JavaScript",
+            "Package management"
+        ],
+        "Source": [
+            "winget",
+            "OpenJS.NodeJS"
+        ],
+        "Description": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment.",
+        "Documentation": "https://nodejs.org/docs/latest/api"
+    },
+    {
+        "Name": "PE-bear",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "winget",
+            "hasherezade.PE-bear"
+        ],
+        "Description": "Portable Executable reversing tool with a friendly GUI.",
+        "Documentation": "https://hshrzd.wordpress.com/pe-bear"
+    },
+    {
+        "Name": "pefile",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "pip",
+            "pefile"
+        ],
+        "Description": "pefile, Portable Executable reader module",
+        "Documentation": ""
+    },
+    {
+        "Name": "pe-sieve",
+        "Category": [
+            "Dynamic Analysis",
+            "Unpacker"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/hasherezade/pe-sieve/releases/download/v0.4.1.1/pe-sieve64.exe"
+        ],
+        "Description": "Scans a given process. Recognizes and dumps a variety of potentially malicious implants (replaced/injected PEs, shellcodes, hooks, in-memory patches).",
+        "Documentation": "https://hshrzd.wordpress.com/pe-sieve"
+    },
+    {
+        "Name": "pestudio",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://www.winitor.com/tools/pestudio/current/pestudio.zip"
+        ],
+        "Description": "PE-Studio is a static analysis tool for Windows Portable Executable (PE) files.  Its primary function is to accelerate the initial malware assessment and triage by quickly finding suspicious artifacts within an executable file without having to run it.",
+        "Documentation": "https://www.winitor.com/references"
+    },
+    {
+        "Name": "ProcDOT",
+        "Category": [
+            "Monitoring"
+        ],
+        "Source": [
+            "other",
+            "https://www.procdot.com/download/procdot/binaries/procdot_1_22_57_windows.zip"
+        ],
+        "Description": "",
+        "Documentation": ""
+    },
+    {
+        "Name": "pe-unmapper",
+        "Category": [
+            "Unpacker"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/hasherezade/pe_unmapper/releases/download/v1.0/pe_unmapper.zip"
+        ],
+        "Description": "Small tool to convert beteween the PE alignments (raw and virtual).",
+        "Documentation": "https://github.com/hasherezade/pe_unmapper"
+    },
+    {
+        "Name": "pycdc",
+        "Category": [
+            "Python",
+            "Decompiler",
+            "Disassembler"
+        ],
+        "Source": [
+            "github",
+            "https://github.com/zrax/pycdc.git"
+        ],
+        "Description": "C++ python bytecode disassembler and decompiler.",
+        "Documentation": ""
+    },
+    {
+        "Name": "The RAT King Parser",
+        "Category": [
+            "Threat hunting"
+        ],
+        "Source": [
+            "pip",
+            "rat-king-parser"
+        ],
+        "Description": "A robust, multiprocessing-capable, multi-family RAT config parser/config extractor for AsyncRAT, DcRAT, VenomRAT, QuasarRAT, XWorm, Xeno RAT, and cloned/derivative RAT families.",
+        "Documentation": "https://github.com/jeFF0Falltrades/rat_king_parser"
+    },
+    {
+        "Name": "Recaf",
+        "Category": [
+            "Java",
+            "Decompiler"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/Col-E/Recaf-Launcher/releases/download/0.8.8/recaf-gui-0.8.8.jar"
+        ],
+        "Description": "Recaf is a modern Java and Android reverse engineering tool.",
+        "Documentation": "https://recaf.coley.software/user/index.html"
+    },
+    {
+        "Name": "RegCool",
+        "Category": [
+            "Windows",
+            "Registry"
+        ],
+        "Source": [
+            "winget",
+            "KurtZimmermann.RegCool"
+        ],
+        "Description": "RegCool is a very flexible editor for the Windows registry.",
+        "Documentation": ""
+    },
+    {
+        "Name": "Regshot",
+        "Category": [
+            "Windows",
+            "Registry"
+        ],
+        "Source": [
+            "github",
+            "https://github.com/Seabreg/Regshot.git"
+        ],
+        "Description": "Regshot is a small, free and open-source registry compare utility that allows you to quickly take a snapshot of your registry and then compare it with a second one - done after doing system changes or installing a new software product.",
+        "Documentation": "https://github.com/Seabreg/Regshot"
+    },
+    {
+        "Name": "Resource Hacker",
+        "Category": [
+            "Windows",
+            "Registry"
+        ],
+        "Source": [
+            "winget",
+            "AngusJohnson.ResourceHacker"
+        ],
+        "Description": "a freeware resource compiler & decompiler for Windows applications",
+        "Documentation": "https://www.angusj.com/resourcehacker"
+    },
+    {
+        "Name": "sclauncher",
+        "Category": [
+            "Debugger",
+            "Shellcode"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/jstrosch/sclauncher/releases/download/v0.0.6/sclauncher64.exe"
+        ],
+        "Description": "A small program written in C that is designed to load 32/64-bit shellcode and allow for execution or debugging. Can also output PE files from shellcode.",
+        "Documentation": "https://github.com/jstrosch/sclauncher"
+    },
+    {
+        "Name": "sfextract",
+        "Category": [
+            ".NET",
+            "Unpacker"
+        ],
+        "Source": [
+            "nuget",
+            "dotnet tool install -g sfextract"
+        ],
+        "Description": "This is a tool to extract the contents (assemblies, configuration, ...) of a single file application to a directory.",
+        "Documentation": "https://github.com/Droppers/SingleFileExtractor"
+    },
+    {
+        "Name": "speakeasy",
+        "Category": [
+            "Emulator"
+        ],
+        "Source": [
+            "pip",
+            "speakeasy-emulator"
+        ],
+        "Description": "Windows kernel and user mode emulation.",
+        "Documentation": "https://cloud.google.com/blog/topics/threat-intelligence/emulation-of-malicious-shellcode-with-speakeasy"
+    },
+    {
+        "Name": "Sysinternal suite",
+        "Category": [
+            "Monitoring"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.Sysinternals.Suite"
+        ],
+        "Description": "Sysinternals Suite is a bundle of the Sysinternals utilities including Process Explorer, Process Monitor, Sysmon, Autoruns, ProcDump, all of the PsTools, and many more.",
+        "Documentation": "https://learn.microsoft.com/en-us/sysinternals/resources/"
+    },
+    {
+        "Name": "System Informer",
+        "Category": [
+            "Monitoring"
+        ],
+        "Source": [
+            "winget",
+            "WinsiderSS.SystemInformer"
+        ],
+        "Description": "System Informer is a free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
+        "Documentation": "https://systeminformer.sourceforge.io"
+    },
+    {
+        "Name": "TTD",
+        "Category": [
+            "Debugger",
+            "Windows"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.TimeTravelDebugging"
+        ],
+        "Description": "TTD is a command line utility that enables you to record program execution and replay it in WinDbg.",
+        "Documentation": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debuggercmds/time-travel-debugging-overview"
+    },
+    {
+        "Name": "uncompyle6",
+        "Category": [
+            "Python",
+            "Decompiler"
+        ],
+        "Source": [
+            "pip",
+            "uncompyle6"
+        ],
+        "Description": "A native Python cross-version decompiler and fragment decompiler. The successor to decompyle, uncompyle, and uncompyle2.",
+        "Documentation": "https://github.com/rocky/python-uncompyle6"
+    },
+    {
+        "Name": "UniExtract2",
+        "Category": [
+            "Unpacker",
+            "Archive"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/Bioruebe/UniExtract2/releases/download/v2.0.0-rc.3/UniExtractRC3.zip"
+        ],
+        "Description": "Universal Extractor 2 is a tool to extract files from any type of archive or installer.",
+        "Documentation": "https://github.com/Bioruebe/UniExtract2?tab=readme-ov-file"
+    },
+    {
+        "Name": "uv",
+        "Category": [
+            "Python",
+            "Package management"
+        ],
+        "Source": [
+            "winget",
+            "astral-sh.uv"
+        ],
+        "Description": "An extremely fast Python package and project manager, written in Rust.",
+        "Documentation": "https://docs.astral.sh/uv"
+    },
+    {
+        "Name": "upx",
+        "Category": [
+            "Compression",
+            "Unpacker"
+        ],
+        "Source": [
+            "winget",
+            "UPX.UPX"
+        ],
+        "Description": "UPX is an advanced executable file compressor.",
+        "Documentation": "https://upx.github.io"
+    },
+    {
+        "Name": "VB Decompiler",
+        "Category": [
+            "Decompiler",
+            "Disassembler",
+            ".NET"
+        ],
+        "Source": [
+            "other",
+            "https://www.vb-decompiler.org/files/vb_decompiler_lite_84.zip"
+        ],
+        "Description": "Best code recovery solution for Visual Basic 5.0/6.0, Visual Basic .NET, and Visual C# applications. Fast and powerful x86, x64 and MS IL disassemblers for Visual Studio 6 and Visual Studio .NET compiled files.",
+        "Documentation": "https://www.vb-decompiler.org/documentation.htm"
+    },
+    {
+        "Name": "vcredist 2015+",
+        "Category": [
+            "Runtime"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.VCRedist.2015+.x64"
+        ],
+        "Description": "The Microsoft Visual C++ 2015-2022 Redistributable Package (x64) installs runtime components of Visual C++ Libraries.",
+        "Documentation": ""
+    },
+    {
+        "Name": "Visual Studio build tools 2022",
+        "Category": [
+            "Compiler"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.VisualStudio.2022.BuildTools"
+        ],
+        "Description": "Visual Studio 2022 buildtools.",
+        "Documentation": ""
+    },
+    {
+        "Name": "VScode",
+        "Category": [
+            "Text editor"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.VisualStudioCode"
+        ],
+        "Description": "Microsoft Visual Studio Code is a code editor.",
+        "Documentation": "https://code.visualstudio.com/docs"
+    },
+    {
+        "Name": "WinDbg",
+        "Category": [
+            "Debugger",
+            "Windows"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.WinDbg"
+        ],
+        "Description": "WinDbg is a debugger that can be used to analyze crash dumps, debug live user-mode and kernel-mode code, and examine CPU registers and memory.",
+        "Documentation": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger"
+    },
+    {
+        "Name": "Windows Terminal",
+        "Category": [
+            "Terminal"
+        ],
+        "Source": [
+            "winget",
+            "Microsoft.WindowsTerminal"
+        ],
+        "Description": "Terminal emulator from Microsoft",
+        "Documentation": "https://github.com/microsoft/terminal/wiki"
+    },
+    {
+        "Name": "Wireshark",
+        "Category": [
+            "Network Analysis"
+        ],
+        "Source": [
+            "winget",
+            "WiresharkFoundation.Wireshark "
+        ],
+        "Description": " Wireshark is the world's foremost network protocol analyzer.",
+        "Documentation": "https://www.wireshark.org/docs"
+    },
+    {
+        "Name": "x64dbg",
+        "Category": [
+            "Debugger"
+        ],
+        "Source": [
+            "winget",
+            "x64dbg.x64dbg"
+        ],
+        "Description": "An open-source binary debugger for Windows, aimed at malware analysis and reverse engineering of executables you do not have the source code for.",
+        "Documentation": "https://help.x64dbg.com/en/latest"
+    },
+    {
+        "Name": "YARA",
+        "Category": [
+            "Classification",
+            "Threat hunting"
+        ],
+        "Source": [
+            "winget",
+            "VirusTotal.YARA-X"
+        ],
+        "Description": "YARA-X is a re-incarnation of YARA, a pattern matching tool designed with malware researchers in mind.",
+        "Documentation": "https://virustotal.github.io/yara-x/docs/intro/getting-started"
+    },
+    {
+        "Name": "XPEviewer",
+        "Category": [
+            "Static Analysis"
+        ],
+        "Source": [
+            "other",
+            "https://github.com/horsicq/XPEViewer/releases/download/0.05/xpeviewer_win64_portable_0.05_x64.zip"
+        ],
+        "Description": "PE file viewer/editor for Windows, Linux and MacOS.",
+        "Documentation": "https://github.com/horsicq/XPEViewer"
+    },
+    {
+        "Name": "Test",
+        "Category": [
+            "Test"
+        ],
+        "Source": [
+            "winget",
+            "Test123.Test123"
+        ],
+        "Description": "Test",
+        "Documentation": "Test.com"
+    }
+]
