@@ -636,7 +636,7 @@ function Invoke-installFromExternalSource {
             Remove-Item -Path $TempDir -Recurse -Force
             
             Write-Host "Installation for $($programName) completed successfully to $InstallPath." -ForegroundColor Green
-            $exitCode = 0 # Simulate success
+            $exitCode = 0 
             
         }
         else {
@@ -650,25 +650,22 @@ function Invoke-installFromExternalSource {
             Write-Host "Installation for $($programName) completed successfully." -ForegroundColor Green
             
             # --- Add to Path ---
-            # Write-Host "Attempting to add '$InstallPath' to the System PATH..." -ForegroundColor Cyan
+            Write-Host "Attempting to add '$InstallPath' to the System PATH..." -ForegroundColor Cyan
 
-            # # Get the current system PATH (Machine scope)
-            # $currentPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
+            # Get the current system PATH 
+            $currentPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
 
-            # # Check if the path already exists (case-insensitive)
-            # # Use -ceq for case-sensitive exact match, ensuring we only add the exact path once.
-            # $pathExists = $currentPath.Split(';') | Where-Object { $_ -ceq $InstallPath }
+            $pathExists = $currentPath.Split(';') | Where-Object { $_ -ceq $InstallPath }
             
-            # if ($pathExists) {
-            #     Write-Host "Path entry '$InstallPath' already exists in the System PATH. Skipping addition." -ForegroundColor Yellow
-            # }
-            # else {
-            #     # Append the new path and update the environment variable
-            #     $newPath = "$currentPath;$InstallPath"
-            #     [Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
-            #     Write-Host "Successfully added '$InstallPath' to the System PATH." -ForegroundColor Green
-            #     Write-Host "NOTE: You may need to restart your terminal or shell for the PATH change to take effect." -ForegroundColor Yellow
-            # }
+            if ($pathExists) {
+                Write-Host "Path entry '$InstallPath' already exists in the System PATH. Skipping addition." -ForegroundColor Yellow
+            }
+            else {
+                $newPath = "$currentPath;$InstallPath"
+                [Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
+                Write-Host "Successfully added '$InstallPath' to the System PATH." -ForegroundColor Green
+                Write-Host "NOTE: You may need to restart your terminal or shell for the PATH change to take effect." -ForegroundColor Yellow
+            }
             
         }
         else {
